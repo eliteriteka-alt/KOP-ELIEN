@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Splash Car Wash – Station de lavage automobile à Bujumbura</title>
+<meta name="description" content="Splash Car Wash, station de lavage automobile sur la 20ème Avenue à Bujumbura. Lavage extérieur, intérieur, complet et lustrage. Appelez le 62 35 39 65.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a2a40;
+  --lake:#0e5f8a;
+  --aqua:#19b8d9;
+  --sun:#ffc93c;
+  --bg:#f4fafc;
+  --fg:#0a2a40;
+  --muted:#4a6577;
+  --card:#ffffff;
+  --line:#cfe2ea;
+  --btn-fg:#0a2a40;
+  --display:"Bricolage Grotesque","Trebuchet MS","Segoe UI",Arial,sans-serif;
+  --body:"Figtree","Segoe UI",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#071c2b;--fg:#e8f4f9;--muted:#9bb6c6;--card:#0d2a3d;--line:#1d4258;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#071c2b;--fg:#e8f4f9;--muted:#9bb6c6;--card:#0d2a3d;--line:#1d4258;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* header */
+header.top{position:absolute;inset:0 0 auto 0;z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px}
+nav.links{display:flex;gap:1.6rem;align-items:center}
+nav.links a{color:#dcefF6;text-decoration:none;font-weight:500}
+nav.links a:hover{color:#fff;text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;background:var(--sun);color:var(--btn-fg);font-weight:600;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:600;line-height:1.2}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn.ghost:hover{border-color:#fff}
+@media (max-width:720px){nav.links a.hide-s{display:none}}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,var(--ink) 0%,#0b4467 100%);color:#fff;overflow:hidden;padding:7.5rem 0 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:2rem;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6.4vw,4.9rem);line-height:.98;letter-spacing:-.03em}
+.hero p.lead{margin-top:1.3rem;max-width:34rem;color:#cfe6f0;font-size:1.15rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.facts{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;color:#a9cbdb;font-size:.98rem}
+.facts span{display:inline-flex;align-items:center;gap:.45rem}
+.facts svg{width:18px;height:18px;flex:none}
+.stage{position:relative;padding-bottom:0}
+.car{width:100%;height:auto;display:block;filter:drop-shadow(0 22px 24px rgba(0,0,0,.35))}
+.sweep{animation:sweep 2.1s .5s cubic-bezier(.5,.1,.3,1) 1 both}
+@keyframes sweep{from{transform:translateX(-140px)}to{transform:translateX(640px)}}
+.bub{position:absolute;bottom:20%;border-radius:50%;border:2px solid rgba(255,255,255,.55);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.55),rgba(255,255,255,.05));opacity:0;animation:rise 7s linear infinite}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translateY(-320px) scale(1.1);opacity:0}}
+.ground{height:26px;background:var(--bg);position:relative;margin-top:-1px}
+.ground::before{content:"";position:absolute;left:0;right:0;top:-40px;height:41px;background:
+  radial-gradient(28px 22px at 28px 41px,var(--bg) 98%,transparent 100%) 0 0/56px 41px repeat-x}
+
+/* sections */
+section{padding:4.5rem 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.05;letter-spacing:-.025em;max-width:20ch}
+.sub{color:var(--muted);margin-top:.9rem;max-width:40rem}
+
+.services{display:grid;grid-template-columns:1fr 1fr;gap:0 3.5rem;margin-top:2.5rem}
+@media (max-width:760px){.services{grid-template-columns:1fr}}
+.svc{padding:1.4rem 0;border-top:2px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:1rem}
+.svc .ic{width:46px;height:46px;border-radius:14px;background:var(--aqua);display:grid;place-items:center;color:var(--ink)}
+.svc .ic svg{width:26px;height:26px}
+.svc:nth-child(3n) .ic{background:var(--sun)}
+.svc h3{font-family:var(--display);font-size:1.3rem;font-weight:800;letter-spacing:-.01em}
+.svc p{color:var(--muted);margin-top:.2rem}
+
+/* request tool */
+.ask{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(1.5rem,4vw,3rem);display:grid;grid-template-columns:1fr 1.1fr;gap:2.5rem;align-items:start}
+@media (max-width:860px){.ask{grid-template-columns:1fr}}
+.ask h2{color:#fff}
+.ask .sub{color:#b7d3e0}
+fieldset{border:0;padding:0;min-width:0}
+legend{font-weight:600;margin-bottom:.6rem;color:#dcefF6}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{padding:.55rem 1rem;border-radius:999px;border:2px solid rgba(255,255,255,.3);cursor:pointer;color:#e8f4f9;font-weight:500}
+.chips input:checked + label{background:var(--sun);border-color:var(--sun);color:var(--ink);font-weight:600}
+.chips input:focus-visible + label{outline:3px solid #fff;outline-offset:2px}
+.preview{margin-top:1.2rem;background:rgba(255,255,255,.08);border-radius:14px;padding:1rem 1.1rem;color:#dcefF6;font-size:.98rem}
+.ask .btn{margin-top:1.2rem}
+
+/* practical */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem}
+@media (max-width:860px){.info{grid-template-columns:1fr}}
+dl{display:grid;gap:1.3rem}
+dt{font-weight:600;color:var(--lake)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) dt{color:var(--aqua)}}
+:root[data-theme="dark"] dt{color:var(--aqua)}
+dd{margin-top:.15rem}
+dd a{text-underline-offset:4px}
+.mapcard{border-radius:24px;overflow:hidden;border:2px solid var(--line);background:var(--card);display:flex;flex-direction:column}
+.mapart{background:#d7edf4;position:relative;aspect-ratio:16/10}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mapart{background:#123650}}
+:root[data-theme="dark"] .mapart{background:#123650}
+.mapart svg{width:100%;height:100%;display:block}
+.mapcard .txt{padding:1.2rem 1.4rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.mapcard .btn{background:var(--ink);color:#fff}
+.pin{animation:drop .8s 1s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes drop{from{transform:translateY(-60px);opacity:0}to{transform:none;opacity:1}}
+
+footer{background:var(--ink);color:#b7d3e0;padding:2.2rem 0;font-size:.95rem}
+footer .row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+footer a{color:#fff}
+.code{font-variant-numeric:tabular-nums}
+
+@media (prefers-reduced-motion:reduce){
+  .sweep,.bub,.pin{animation:none}
+  .bub{display:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Splash Car Wash – accueil">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C16 2 6 13.5 6 20a10 10 0 0 0 20 0C26 13.5 16 2 16 2Z" fill="#19b8d9"/><path d="M11 20.5a5 5 0 0 0 5 5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="24.5" cy="7" r="2.6" fill="#ffc93c"/></svg>
+      Splash Car Wash
+    </a>
+    <nav class="links" aria-label="Navigation principale">
+      <a class="hide-s" href="#services">Services</a>
+      <a class="hide-s" href="#demande">Demander un lavage</a>
+      <a class="hide-s" href="#acces">Nous trouver</a>
+      <a class="btn" href="tel:+25762353965">Appeler</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Votre voiture ressort comme neuve.</h1>
+      <p class="lead">Splash Car Wash est une station de lavage automobile à Bujumbura, sur la 20ème Avenue. Passez avec votre véhicule, on s'occupe du reste.</p>
+      <div class="cta-row">
+        <a class="btn" href="#demande">Demander un lavage</a>
+        <a class="btn ghost" href="tel:+25762353965">62 35 39 65</a>
+      </div>
+      <div class="facts">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>20ème Avenue, Bujumbura</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ouvre à 07h30 le samedi</span>
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <span class="bub" style="left:12%;width:16px;height:16px;animation-delay:.2s"></span>
+      <span class="bub" style="left:30%;width:26px;height:26px;animation-delay:1.8s"></span>
+      <span class="bub" style="left:52%;width:12px;height:12px;animation-delay:3.1s"></span>
+      <span class="bub" style="left:70%;width:22px;height:22px;animation-delay:.9s"></span>
+      <span class="bub" style="left:86%;width:14px;height:14px;animation-delay:4.2s"></span>
+      <svg class="car" viewBox="0 0 520 210">
+        <defs>
+          <clipPath id="bodyclip"><path id="bodyshape" d="M20 140C20 120 40 112 70 108L130 70C145 58 165 52 190 52L320 52C350 52 372 64 392 88L430 104C470 110 500 118 500 140L500 150C500 156 496 160 490 160L30 160C24 160 20 156 20 150Z"/></clipPath>
+          <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="paint" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd45c"/><stop offset="1" stop-color="#f5a91c"/></linearGradient>
+        </defs>
+        <ellipse cx="260" cy="196" rx="230" ry="9" fill="#000" opacity=".25"/>
+        <path d="M20 140C20 120 40 112 70 108L130 70C145 58 165 52 190 52L320 52C350 52 372 64 392 88L430 104C470 110 500 118 500 140L500 150C500 156 496 160 490 160L30 160C24 160 20 156 20 150Z" fill="url(#paint)"/>
+        <path d="M140 100L174 68L232 68L232 100Z" fill="#0a2a40"/>
+        <path d="M246 68L322 68C340 68 352 78 366 100L246 100Z" fill="#0a2a40"/>
+        <path d="M140 100L174 68L232 68L232 100Z M246 68L322 68C340 68 352 78 366 100L246 100Z" fill="#19b8d9" opacity=".22"/>
+        <rect x="236" y="106" width="16" height="4" rx="2" fill="#a86d00"/>
+        <rect x="470" y="122" width="26" height="9" rx="4" fill="#fff8d8"/>
+        <rect x="24" y="126" width="16" height="9" rx="4" fill="#ff6b5a"/>
+        <g clip-path="url(#bodyclip)"><rect class="sweep" x="0" y="40" width="120" height="130" fill="url(#shine)" transform="skewX(-20)"/></g>
+        <g><circle cx="120" cy="160" r="34" fill="#0a2a40"/><circle cx="120" cy="160" r="17" fill="#cfe2ea"/><circle cx="120" cy="160" r="6" fill="#0a2a40"/></g>
+        <g><circle cx="398" cy="160" r="34" fill="#0a2a40"/><circle cx="398" cy="160" r="17" fill="#cfe2ea"/><circle cx="398" cy="160" r="6" fill="#0a2a40"/></g>
+        <g fill="#fff" opacity=".95">
+          <circle cx="205" cy="50" r="11"/><circle cx="228" cy="42" r="8"/><circle cx="184" cy="56" r="7"/><circle cx="252" cy="49" r="12"/><circle cx="279" cy="44" r="7"/><circle cx="302" cy="50" r="9"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div class="ground"></div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Ce qu'on lave, ce qu'on nettoie</h2>
+    <p class="sub">Choisissez le service qui correspond à l'état de votre véhicule. Pour connaître le tarif, appelez-nous ou écrivez sur WhatsApp.</p>
+    <div class="services">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s-6 6.5-6 10.5a6 6 0 0 0 12 0C18 9.500 12 3 12 3Z"/></svg></div><div><h3>Lavage extérieur</h3><p>Carrosserie, vitres, jantes et pneus lavés à la main, puis séchés.</p></div></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="9" rx="2"/><path d="M7 9V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg></div><div><h3>Nettoyage intérieur</h3><p>Aspiration, sièges, tapis, tableau de bord et vitres intérieures.</p></div></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg></div><div><h3>Lavage complet</h3><p>Extérieur et intérieur en une seule visite. Le plus demandé.</p></div></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/></svg></div><div><h3>Lustrage</h3><p>Une finition brillante qui protège la peinture de la poussière et du soleil.</p></div></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M8 7V5h8v2M8 17v2M16 17v2"/></svg></div><div><h3>Lavage du moteur</h3><p>Dégraissage du compartiment moteur, avec précautions pour l'électrique.</p></div></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M6 17V9l3-4h6l3 4v8"/></svg></div><div><h3>Tapis et sièges en profondeur</h3><p>Pour les taches tenaces et les odeurs qui restent après un lavage normal.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="demande" style="padding-top:0">
+  <div class="wrap">
+    <div class="ask">
+      <div>
+        <h2>Prévenez-nous avant de passer</h2>
+        <p class="sub">Dites-nous quel véhicule et quel service vous voulez. On ouvre WhatsApp avec le message déjà écrit, il ne reste qu'à l'envoyer.</p>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Votre véhicule</legend>
+          <div class="chips" id="veh">
+            <input type="radio" name="v" id="v1" value="une berline" checked><label for="v1">Berline</label>
+            <input type="radio" name="v" id="v2" value="un SUV / 4x4"><label for="v2">SUV / 4x4</label>
+            <input type="radio" name="v" id="v3" value="un pick-up"><label for="v3">Pick-up</label>
+            <input type="radio" name="v" id="v4" value="un minibus"><label for="v4">Minibus</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Le service</legend>
+          <div class="chips" id="svc">
+            <input type="radio" name="s" id="s1" value="un lavage extérieur"><label for="s1">Extérieur</label>
+            <input type="radio" name="s" id="s2" value="un nettoyage intérieur"><label for="s2">Intérieur</label>
+            <input type="radio" name="s" id="s3" value="un lavage complet" checked><label for="s3">Complet</label>
+            <input type="radio" name="s" id="s4" value="un lustrage"><label for="s4">Lustrage</label>
+          </div>
+        </fieldset>
+        <div class="preview" id="preview" aria-live="polite"></div>
+        <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acces" style="padding-top:1rem">
+  <div class="wrap">
+    <h2>Où nous trouver</h2>
+    <div class="info">
+      <dl>
+        <div><dt>Adresse</dt><dd>20ème Avenue, Bujumbura<br><span class="code">J9G4+X42</span> (code Plus Code Google Maps)</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+25762353965" class="code">62 35 39 65</a></dd></div>
+        <div><dt>Horaires</dt><dd>Ouvre à 07h30 le samedi.<br>Pour les autres jours, appelez avant de venir.</dd></div>
+      </dl>
+      <div class="mapcard">
+        <div class="mapart" aria-hidden="true">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="480" height="300" fill="none"/>
+            <g stroke="#ffffff" stroke-width="16" stroke-linecap="round" opacity=".95" fill="none">
+              <path d="M-10 90 L490 130"/><path d="M-10 230 L490 200"/><path d="M150 -10 L190 310"/><path d="M340 -10 L310 310"/>
+            </g>
+            <g stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".8" fill="none">
+              <path d="M-10 165 L490 165"/><path d="M250 -10 L250 310"/><path d="M60 -10 L80 310"/><path d="M410 -10 L420 310"/>
+            </g>
+            <g class="pin"><path d="M245 60C245 60 218 100 218 122a27 27 0 0 0 54 0C272 100 245 60 245 60Z" fill="#0a2a40"/><circle cx="245" cy="120" r="11" fill="#ffc93c"/></g>
+          </svg>
+        </div>
+        <div class="txt">
+          <span>Splash Car Wash, 20ème Ave</span>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=J9G4%2BX42%20Bujumbura" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>© <span id="yr">2026</span> Splash Car Wash · Station de lavage automobile, Bujumbura</span>
+    <a href="tel:+25762353965" class="code">62 35 39 65</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var phone = "25762353965";
+  var wa = document.getElementById("wa");
+  var prev = document.getElementById("preview");
+  function msg(){
+    var v = document.querySelector('input[name="v"]:checked').value;
+    var s = document.querySelector('input[name="s"]:checked').value;
+    return "Bonjour Splash Car Wash, je voudrais " + s + " pour " + v + ". Quel est le tarif et à quelle heure puis-je passer ?";
+  }
+  function update(){
+    var m = msg();
+    prev.textContent = m;
+    wa.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(m);
+  }
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){ r.addEventListener("change", update); });
+  update();
+  try { document.getElementById("yr").textContent = new Date().getFullYear(); } catch(e){}
+})();
+</script>
+</body>
+</html>
